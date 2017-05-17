@@ -36,5 +36,6 @@ class TestController extends Controller
         var_dump($data);
 
         // return $this->render('test');
+
     }
 }

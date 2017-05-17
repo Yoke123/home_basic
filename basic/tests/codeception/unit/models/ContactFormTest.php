@@ -3,9 +3,9 @@
 namespace tests\codeception\unit\models;
 
 use app\models\ContactForm;
+use Codeception\Specify;
 use Yii;
 use yii\codeception\TestCase;
-use Codeception\Specify;
 
 class ContactFormTest extends TestCase
 {
@@ -34,10 +34,10 @@ class ContactFormTest extends TestCase
         $model->expects($this->once())->method('validate')->will($this->returnValue(true));
 
         $model->attributes = [
-            'name' => 'Tester',
-            'email' => 'tester@example.com',
+            'name'    => 'Tester',
+            'email'   => 'tester@example.com',
             'subject' => 'very important letter subject',
-            'body' => 'body of current message',
+            'body'    => 'body of current message',
         ];
 
         $this->specify('email should be send', function () use ($model) {
