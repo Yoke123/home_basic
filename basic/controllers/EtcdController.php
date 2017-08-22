@@ -22,6 +22,7 @@ class EtcdController
         $client->rm('/foo');
 
         // Create a directory
+        
         $client->mkdir('/fooDir');
         // Remove dir
         $client->rmdir('/fooDir');
