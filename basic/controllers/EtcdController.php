@@ -7,6 +7,7 @@ class EtcdController
 {
     public function actionIndex($server)
     {
+        //test
         $client = new Client($server);
         $client->set('/foo', 'fooValue');
         // Set the ttl
